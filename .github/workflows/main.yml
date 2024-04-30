@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Run tests and coverage headless
-        run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+        run: ng test --browsers=ChromeHeadless --progress=false --watch=false --code-coverage
         continue-on-error: true
 
       - name: SonarQube analysis
