@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Run tests
-      run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI --code-coverage
       
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
