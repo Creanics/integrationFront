@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - main
 
 jobs:
   build:
@@ -20,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run linting and tests
+    - name: Run tests
       run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
       
     - name: SonarQube Scan
